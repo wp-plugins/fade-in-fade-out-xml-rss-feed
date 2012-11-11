@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 Requires at least: 3.0
-Tested up to: 3.4.1
-Stable tag: 6.0
+Tested up to: 3.4.2
+Stable tag: 6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -16,10 +16,6 @@ This plug-in directly retrieve title from RSS XML feed and create the fade in fa
 
 Check official website for live demo [http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/](http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/)
 
-Now a day's everyone use fade in fade out text in some portion of the website to attract the user. So i have created new plug-in to do this. This plug-in directly retrieve title from RSS feed and create the fade in fade out effect in the word press website.
-
-By default, the script fades from black-to-white upon enter, and white-to-black upon exit.
-
 Related Links:		
 
 * <a href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/">Live demo</a>
@@ -27,7 +23,11 @@ Related Links:
 * <a href="http://www.gopiplus.com/work/">Plugin Homepage</a>	
 * <a href="http://www.gopiplus.com/work/plugin-list/">All plugin list</a>
 * <a href="http://www.gopiplus.com/work/about/">About author</a>
-		
+
+Now a day's everyone use fade in fade out text in some portion of the website to attract the user. So i have created new plug-in to do this. This plug-in directly retrieve title from RSS feed and create the fade in fade out effect in the word press website.
+
+By default, the script fades from black-to-white upon enter, and white-to-black upon exit.
+
 Do you want to create the fade in fade out effect for your own content? Then use <a href="http://www.gopiplus.com/work/2011/04/22/wordpress-plugin-wp-fadein-text-news/">WP fade in text news</a> plugin.
 			
 *	Free.
@@ -97,38 +97,46 @@ http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rs
 
 == Upgrade Notice ==
 
-=Version 1.0=			
+= Version 1.0=			
 					
 First version
 
-=Version 3.0=
+= Version 3.0=
 
 Tested up to 3.3.1
 
-=Version 5.0=
+= Version 5.0=
 
 Tested up to 3.4.1
 Slight change in the short code, Please find the new short code for your gallery
 
-=Version 6.0 =
+= Version 6.0 =
 
 New demo link, www.gopiplus.com
+
+= Version 6.1 =
+
+Tested up to 3.4.2
 
 == Changelog ==
 
-=Version 1.0=			
+= Version 1.0=			
 					
 First version
 
-=Version 3.0=
+= Version 3.0=
 
 Tested up to 3.3.1
 
-=Version 5.0=
+= Version 5.0=
 
 Tested up to 3.4.1
 Slight change in the short code, Please find the new short code for your gallery
 
-=Version 6.0 =
+= Version 6.0 =
 
-New demo link, www.gopiplus.com
+New demo link, http://www.gopiplus.com
+
+= Version 6.1 =
+
+Tested up to 3.4.2
