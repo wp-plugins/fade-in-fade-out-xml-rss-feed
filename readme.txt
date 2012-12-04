@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable tag: 6.1
+Tested up to: 3.5
+Stable tag: 6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -118,6 +118,10 @@ New demo link, www.gopiplus.com
 
 Tested up to 3.4.2
 
+= Version 6.2 =
+
+Tested up to 3.5
+
 == Changelog ==
 
 = Version 1.0=			
@@ -140,3 +144,7 @@ New demo link, http://www.gopiplus.com
 = Version 6.1 =
 
 Tested up to 3.4.2
+
+= Version 6.2 =
+
+Tested up to 3.5
