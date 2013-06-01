@@ -5,7 +5,7 @@ Plugin Name: Fade in fade out xml rss feed
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Description: Now a day's everyone use fade in fade out text in some portion of the website to attract the user. So i have created new plug-in to do this. This plug-in directly retrieve title from RSS feed and create the fade in fade out effect in the word press website..
 Author: Gopi.R
-Version: 6.2
+Version: 7.0
 Author URI: http://www.gopiplus.com/work/
 Donate link: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags: wordpress, plugin, widget, fade in, fade out, rss, xml, feed
@@ -14,6 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 global $wpdb, $wp_version;
+define('WP_FIFOXMLRSSFEED_LINK', 'Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/">click here</a>');
+define('WP_FIFOXMLRSSFEED_FAV', 'http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/');
 
 function FIFOXMLRSSFEED() 
 {
@@ -102,9 +104,12 @@ function FIFOXMLRSSFEED_admin_options()
 	global $wpdb;
 	?>
 <div class="wrap">
-  <h2>Fade in xml rss feed</h2>
-</div>
-<?php
+  <div class="form-wrap">
+    <div id="icon-edit" class="icon32 icon32-posts-post"><br>
+    </div>
+    <h2>Fade in xml rss feed</h2>
+    <h3>Plugin setting</h3>
+    <?php
 	$FIFOXMLRSSFEED_Title = get_option('FIFOXMLRSSFEED_Title');
 	$FIFOXMLRSSFEED_FadeWait = get_option('FIFOXMLRSSFEED_FadeWait');
 	$FIFOXMLRSSFEED_rss_0 = get_option('FIFOXMLRSSFEED_rss_0');
@@ -113,6 +118,10 @@ function FIFOXMLRSSFEED_admin_options()
 	$FIFOXMLRSSFEED_rss_3 = get_option('FIFOXMLRSSFEED_rss_3');
 	if (@$_POST['FIFOXMLRSSFEED_submit']) 
 	{
+	
+	 	//	Just security thingy that wordpress offers us
+		check_admin_referer('FIFOXMLRSSFEED_form_setting');
+		
 		$FIFOXMLRSSFEED_Title = stripslashes($_POST['FIFOXMLRSSFEED_Title']);
 		$FIFOXMLRSSFEED_rss_0 = stripslashes($_POST['FIFOXMLRSSFEED_rss_0']);
 		$FIFOXMLRSSFEED_rss_1 = stripslashes($_POST['FIFOXMLRSSFEED_rss_1']);
@@ -125,33 +134,51 @@ function FIFOXMLRSSFEED_admin_options()
 		update_option('FIFOXMLRSSFEED_rss_2', $FIFOXMLRSSFEED_rss_2 );
 		update_option('FIFOXMLRSSFEED_rss_3', $FIFOXMLRSSFEED_rss_3 );
 		update_option('FIFOXMLRSSFEED_FadeWait', $FIFOXMLRSSFEED_FadeWait );
+		
+		?>
+		<div class="updated fade">
+			<p><strong>Details successfully updated.</strong></p>
+		</div>
+		<?php
 	}
 	?>
-<form name="FIFOXMLRSSFEED_form" method="post" action="">
-  <?php
-	echo '<p>Title:<br><input  style="width: 200px;" type="text" value="';
-	echo $FIFOXMLRSSFEED_Title . '" name="FIFOXMLRSSFEED_Title" id="FIFOXMLRSSFEED_Title" /> Widget title</p>';
-	echo '<p>Fade Wait:<br><input  style="width: 100px;" type="text" value="';
-	echo $FIFOXMLRSSFEED_FadeWait . '" name="FIFOXMLRSSFEED_FadeWait" id="FIFOXMLRSSFEED_FadeWait" /></p>';
-	echo '<p>RSS feed:<br><input  style="width: 500px;" type="text" value="';
-	echo $FIFOXMLRSSFEED_rss_0 . '" name="FIFOXMLRSSFEED_rss_0" id="FIFOXMLRSSFEED_rss_0" /> Only for widget</p>';
-	echo '<p>RSS feed 1:<br><input  style="width: 500px;" type="text" value="';
-	echo $FIFOXMLRSSFEED_rss_1 . '" name="FIFOXMLRSSFEED_rss_1" id="FIFOXMLRSSFEED_rss_1" /> [fadein-fadeout-rss feed="link1"]</p>';
-	echo '<p>RSS feed 2:<br><input  style="width: 500px;" type="text" value="';
-	echo $FIFOXMLRSSFEED_rss_2 . '" name="FIFOXMLRSSFEED_rss_2" id="FIFOXMLRSSFEED_rss_2" /> [fadein-fadeout-rss feed="link2"]</p>';
-	echo '<p>RSS feed 3:<br><input  style="width: 500px;" type="text" value="';
-	echo $FIFOXMLRSSFEED_rss_3 . '" name="FIFOXMLRSSFEED_rss_3" id="FIFOXMLRSSFEED_rss_3" /> [fadein-fadeout-rss feed="link3"]</p>';
-	echo '<input name="FIFOXMLRSSFEED_submit" id="FIFOXMLRSSFEED_submit" lang="publish" class="button-primary" value="Update Setting" type="Submit" />';
-	?>
-</form>
-<br />
-<h2>Plugin configuration option</h2>
-<ol>
-<li>Drag and drop the widget</li>
-<li>Add the plugin in the posts or pages</li>
-<li>Add directly in the theme</li>
-</ol>
-Check official website for live demo and help <a target="_blank" href='http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/'>click here</a>
+    <form name="FIFOXMLRSSFEED_form" method="post" action="">
+	<label for="tag-title">Title</label>
+	<input name="FIFOXMLRSSFEED_Title" size="50" id="FIFOXMLRSSFEED_Title" type="text" value="<?php echo $FIFOXMLRSSFEED_Title; ?>" />
+	<p>Widget title</p>
+		  
+	<label for="tag-title">Fade Wait</label>
+	<input name="FIFOXMLRSSFEED_FadeWait" id="FIFOXMLRSSFEED_FadeWait" type="text" size="30" value="<?php echo $FIFOXMLRSSFEED_FadeWait; ?>" />
+	<p></p>
+	
+	<label for="tag-title">RSS feed for widget</label>
+	<input name="FIFOXMLRSSFEED_rss_0" id="FIFOXMLRSSFEED_rss_0" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_0; ?>" />
+	<p>This option only for widget</p>
+	
+	<label for="tag-title">RSS feed 1</label>
+	<input name="FIFOXMLRSSFEED_rss_1" id="FIFOXMLRSSFEED_rss_1" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_1; ?>" />
+	<p>Short code : [fadein-fadeout-rss feed="link1"]</p>
+	
+	<label for="tag-title">RSS feed 2</label>
+	<input name="FIFOXMLRSSFEED_rss_2" id="FIFOXMLRSSFEED_rss_2" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_2; ?>" />
+	<p>Short code : [fadein-fadeout-rss feed="link2"]</p>
+	
+	<label for="tag-title">RSS feed 3</label>
+	<input name="FIFOXMLRSSFEED_rss_3" id="FIFOXMLRSSFEED_rss_3" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_3; ?>" />
+	<p>Short code : [fadein-fadeout-rss feed="link3"]</p>
+	
+	<?php wp_nonce_field('FIFOXMLRSSFEED_form_setting'); ?>
+	<input name="FIFOXMLRSSFEED_submit" id="FIFOXMLRSSFEED_submit" lang="publish" class="button-primary" value="Update Setting" type="Submit" />
+    </form>
+    <h3>Plugin configuration option</h3>
+    <ol>
+      <li>Drag and drop the widget.</li>
+      <li>Add the plugin in the posts or pages using short code.</li>
+      <li>Add directly in to the theme using PHP code.</li>
+    </ol>
+  </div>
+  <p class="description"><?php echo WP_FIFOXMLRSSFEED_LINK; ?></p>
+</div>
 <?php
 }
 
@@ -235,7 +262,7 @@ function FIFOXMLRSSFEED_init()
 
 function FIFOXMLRSSFEED_deactivation() 
 {
-	
+	// No required now
 }
 
 function FIFOXMLRSSFEED_javascript_files() 

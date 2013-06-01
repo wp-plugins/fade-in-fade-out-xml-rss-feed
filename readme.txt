@@ -4,9 +4,9 @@ Donate link: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fa
 Author URI: http://www.gopiplus.com/work/
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 6.2
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -15,8 +15,6 @@ This plug-in directly retrieve title from RSS XML feed and create the fade in fa
 == Description ==
 
 Check official website for live demo [http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/](http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/)
-
-Related Links:		
 
 * <a href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/">Live demo</a>
 * <a href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/">Plugin and sitemaps FAQ</a>
@@ -122,6 +120,11 @@ Tested up to 3.4.2
 
 Tested up to 3.5
 
+= Version 7.0 =
+
+Tested up to 3.6
+Added some security feature.
+
 == Changelog ==
 
 = Version 1.0=			
@@ -148,3 +151,8 @@ Tested up to 3.4.2
 = Version 6.2 =
 
 Tested up to 3.5
+
+= Version 7.0 =
+
+Tested up to 3.6
+Added some security feature.
