@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 7.0
+Tested up to: 3.8
+Stable tag: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -93,6 +93,8 @@ http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rs
 
 1. http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 
+2. http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
+
 == Upgrade Notice ==
 
 = Version 1.0=			
@@ -125,6 +127,12 @@ Tested up to 3.5
 Tested up to 3.6
 Added some security feature.
 
+= Version 7.1 =
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Translators Welcome.
+
 == Changelog ==
 
 = Version 1.0=			
@@ -156,3 +164,9 @@ Tested up to 3.5
 
 Tested up to 3.6
 Added some security feature.
+
+= Version 7.1 =
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Translators Welcome.
