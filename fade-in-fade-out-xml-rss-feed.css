@@ -3,7 +3,8 @@
 
 #FIFOXMLRSSFEED_CSS_POSTPASGE 
 {
-	padding:5px;
+	padding-top:5px;
+	padding-bottom:5px;
 }
 #FIFOXMLRSSFEED_CSS_POSTPASGE a 
 {
@@ -16,7 +17,8 @@
 
 #FIFOXMLRSSFEED_CSS_WIDGET 
 {
-	padding:5px;
+	padding-top:5px;
+	padding-bottom:5px;
 }
 #FIFOXMLRSSFEED_CSS_WIDGET a 
 {

@@ -1,12 +1,12 @@
 === Fade in fade out xml rss feed ===
 Contributors: www.gopiplus.com, gopiplus
 Donate link: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
-Author URI: http://www.gopiplus.com/work/
+Author URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 7.1
+Tested up to: 3.9
+Stable tag: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -17,7 +17,6 @@ This plug-in directly retrieve title from RSS XML feed and create the fade in fa
 Check official website for live demo [http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/](http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/)
 
 * <a href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/">Live demo</a>
-* <a href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/">Plugin and sitemaps FAQ</a>
 * <a href="http://www.gopiplus.com/work/">Plugin Homepage</a>	
 * <a href="http://www.gopiplus.com/work/plugin-list/">All plugin list</a>
 * <a href="http://www.gopiplus.com/work/about/">About author</a>
@@ -34,13 +33,7 @@ Do you want to create the fade in fade out effect for your own content? Then use
 *	Read title from RSS feed.
 *	Short code available for pages and posts.
 
-Check the below link, have three option to install and configure this Fade in fade out xml rss feed plugin. 
-
-http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
-
-http://www.gopiplus.com/work/2011/04/22/wordpress-plugin-wp-fadein-text-news/
-
-**My other few plugins**
+**My other news plugins**
 
 * [WP fade in text news](http://www.gopiplus.com/work/2011/04/22/wordpress-plugin-wp-fadein-text-news/)				
 * [Up down image slideshow gallery](http://www.gopiplus.com/work/2011/04/25/wordpress-plugin-up-down-image-slideshow-script/)			
@@ -91,9 +84,9 @@ http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rs
 
 == Screenshots ==
 
-1. Admin Page http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
+1. Front Page. http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 
-2. Front Page http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
+2. Admin Page. http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 
 == Upgrade Notice ==
 
@@ -133,6 +126,12 @@ Added some security feature.
 2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
 Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Translators Welcome.
 
+= Version 7.2 =
+
+1. Tested up to 3.9
+2. Added some security feature.
+3. Now it using fetch_feed() wordpress method to load rss feed. (fetch_feed() uses the SimplePie and FeedCache functionality for retrieval and parsing and automatic caching)
+
 == Changelog ==
 
 = Version 1.0=			
@@ -170,3 +169,9 @@ Added some security feature.
 1. Tested up to 3.8
 2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
 Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Translators Welcome.
+
+= Version 7.2 =
+
+1. Tested up to 3.9
+2. Added some security feature.
+3. Now it using fetch_feed() wordpress method to load rss feed. (fetch_feed() uses the SimplePie and FeedCache functionality for retrieval and parsing and automatic caching)
