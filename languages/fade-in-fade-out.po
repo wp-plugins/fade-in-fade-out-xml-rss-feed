@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fade in fade out xml rss feed 7.1\n"
-"POT-Creation-Date: 2014-04-17 23:50+0800\n"
-"PO-Revision-Date: 2014-04-17 23:50+0800\n"
+"POT-Creation-Date: 2014-08-03 10:04+0800\n"
+"PO-Revision-Date: 2014-08-03 10:04+0800\n"
 "Last-Translator: \n"
 "Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
 "MIME-Version: 1.0\n"
@@ -13,90 +13,95 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../fade-in-fade-out-xml-rss-feed.php:94
-#: ../fade-in-fade-out-xml-rss-feed.php:118
-#: ../fade-in-fade-out-xml-rss-feed.php:266
-#: ../fade-in-fade-out-xml-rss-feed.php:274
-#: ../fade-in-fade-out-xml-rss-feed.php:278
-msgid "Fade in xml rss feed"
-msgstr ""
-
-#: ../fade-in-fade-out-xml-rss-feed.php:96
-#: ../fade-in-fade-out-xml-rss-feed.php:191
-msgid "Check official website for more information"
+#: ../fade-in-fade-out-xml-rss-feed.php:79
+#: ../fade-in-fade-out-xml-rss-feed.php:265
+msgid "Invalid or Broken rss link."
 msgstr ""
 
 #: ../fade-in-fade-out-xml-rss-feed.php:97
-#: ../fade-in-fade-out-xml-rss-feed.php:192
+#: ../fade-in-fade-out-xml-rss-feed.php:121
+#: ../fade-in-fade-out-xml-rss-feed.php:274
+#: ../fade-in-fade-out-xml-rss-feed.php:282
+#: ../fade-in-fade-out-xml-rss-feed.php:286
+msgid "Fade in xml rss feed"
+msgstr ""
+
+#: ../fade-in-fade-out-xml-rss-feed.php:99
+#: ../fade-in-fade-out-xml-rss-feed.php:194
+msgid "Check official website for more information"
+msgstr ""
+
+#: ../fade-in-fade-out-xml-rss-feed.php:100
+#: ../fade-in-fade-out-xml-rss-feed.php:195
 msgid "click here"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:119
+#: ../fade-in-fade-out-xml-rss-feed.php:122
 msgid "Plugin setting"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:149
+#: ../fade-in-fade-out-xml-rss-feed.php:152
 msgid "Details successfully updated."
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:155
+#: ../fade-in-fade-out-xml-rss-feed.php:158
 msgid "Widget title (Only for widget)"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:157
+#: ../fade-in-fade-out-xml-rss-feed.php:160
 msgid "Widget title"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:159
+#: ../fade-in-fade-out-xml-rss-feed.php:162
 msgid "Fade Wait (Global Setting)"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:163
+#: ../fade-in-fade-out-xml-rss-feed.php:166
 msgid "RSS feed for widget (Support only external feed)"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:165
+#: ../fade-in-fade-out-xml-rss-feed.php:168
 msgid "This option only for widget"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:167
+#: ../fade-in-fade-out-xml-rss-feed.php:170
 msgid "RSS feed 1 (Support only external feed)"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:169
-#: ../fade-in-fade-out-xml-rss-feed.php:173
-#: ../fade-in-fade-out-xml-rss-feed.php:177
+#: ../fade-in-fade-out-xml-rss-feed.php:172
+#: ../fade-in-fade-out-xml-rss-feed.php:176
+#: ../fade-in-fade-out-xml-rss-feed.php:180
 msgid "Short code :"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:171
+#: ../fade-in-fade-out-xml-rss-feed.php:174
 msgid "RSS feed 2 (Support only external feed)"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:175
+#: ../fade-in-fade-out-xml-rss-feed.php:178
 msgid "RSS feed 3 (Support only external feed)"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:180
+#: ../fade-in-fade-out-xml-rss-feed.php:183
 msgid "Update Setting"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:181
+#: ../fade-in-fade-out-xml-rss-feed.php:184
 msgid "Help"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:183
+#: ../fade-in-fade-out-xml-rss-feed.php:186
 msgid "Plugin configuration option"
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:185
+#: ../fade-in-fade-out-xml-rss-feed.php:188
 msgid "Drag and drop the widget."
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:186
+#: ../fade-in-fade-out-xml-rss-feed.php:189
 msgid "Add the plugin in the posts or pages using short code."
 msgstr ""
 
-#: ../fade-in-fade-out-xml-rss-feed.php:187
+#: ../fade-in-fade-out-xml-rss-feed.php:190
 msgid "Add directly in to the theme using PHP code."
 msgstr ""

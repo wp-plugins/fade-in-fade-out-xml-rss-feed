@@ -4,7 +4,7 @@ Plugin Name: Fade in fade out xml rss feed
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Description: Now a day's everyone use fade in fade out text in some portion of the website to attract the user. So i have created new plug-in to do this. This plug-in directly retrieve title from RSS feed and create the fade in fade out effect in the word press website..
 Author: Gopi Ramasamy
-Version: 7.2
+Version: 7.3
 Author URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Donate link: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags: wordpress, plugin, widget, fade in, fade out, rss, xml, feed
@@ -56,25 +56,28 @@ function FIFOXMLRSSFEED()
 				$cnt++;
 			}
 		}
+		?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_option('siteurl'); ?>/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.css" />
+		<script type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.js"></script>
+		<script type="text/javascript" language="javascript">
+			function FIFOXMLRSSFEED_SetFadeLinks() 
+			{
+				<?php echo $FIFOXMLRSSFEED_Arr ?>
+			}
+			var FIFOXMLRSSFEED_FadeOut = 255;
+			var FIFOXMLRSSFEED_FadeIn = 0;
+			var FIFOXMLRSSFEED_Fade = 0;
+			var FIFOXMLRSSFEED_FadeStep = 2;
+			var FIFOXMLRSSFEED_FadeWait = <?php echo $FIFOXMLRSSFEED_FadeWait; ?>;
+			var FIFOXMLRSSFEED_bFadeOutt = true;
+			</script>
+		<span id="FIFOXMLRSSFEED_CSS_WIDGET"><a href="<?php echo $FIFOXMLRSSFEED_First_link; ?>" id="FIFOXMLRSSFEED_Link"><?php echo $FIFOXMLRSSFEED_First_text; ?></a> </span>
+		<?php	
 	}
-
-	?>
-	<link rel="stylesheet" type="text/css" href="<?php echo get_option('siteurl'); ?>/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.css" />
-	<script type="text/javascript" src="<?php echo get_option('siteurl'); ?>/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.js"></script>
-	<script type="text/javascript" language="javascript">
-		function FIFOXMLRSSFEED_SetFadeLinks() 
-		{
-			<?php echo $FIFOXMLRSSFEED_Arr ?>
-		}
-		var FIFOXMLRSSFEED_FadeOut = 255;
-		var FIFOXMLRSSFEED_FadeIn = 0;
-		var FIFOXMLRSSFEED_Fade = 0;
-		var FIFOXMLRSSFEED_FadeStep = 2;
-		var FIFOXMLRSSFEED_FadeWait = <?php echo $FIFOXMLRSSFEED_FadeWait; ?>;
-		var FIFOXMLRSSFEED_bFadeOutt = true;
-		</script>
-	<span id="FIFOXMLRSSFEED_CSS_WIDGET"><a href="<?php echo $FIFOXMLRSSFEED_First_link; ?>" id="FIFOXMLRSSFEED_Link"><?php echo $FIFOXMLRSSFEED_First_text; ?></a> </span>
-	<?php	
+	else
+	{
+		_e('Invalid or Broken rss link.', 'fade-in-fade-out');
+	}
 }
 
 function FIFOXMLRSSFEED_install() 
@@ -201,6 +204,8 @@ function FIFOXMLRSSFEED_shortcode( $atts )
 {
 	global $wpdb;
 	$JaFade = "";
+	$FIFOXMLRSSFEED_First_link = "";
+	$FIFOXMLRSSFEED_First_text = "";
 	$FIFOXMLRSSFEED_Arr = "";
 	$FIFOXMLRSSFEED_FadeWait = get_option('FIFOXMLRSSFEED_FadeWait');
 	if(!is_numeric($FIFOXMLRSSFEED_FadeWait)){ $FIFOXMLRSSFEED_FadeWait = 3000; } 
@@ -241,21 +246,24 @@ function FIFOXMLRSSFEED_shortcode( $atts )
 				$cnt++;
 			}
 		}
+		$JaFade = $JaFade . "<link rel='stylesheet' type='text/css' href='".get_option('siteurl')."/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.css' />";
+		$JaFade = $JaFade . "<script type='text/javascript' src='".get_option('siteurl')."/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.js'></script>";
+		$JaFade = $JaFade . "<script type='text/javascript' language='javascript'>function FIFOXMLRSSFEED_SetFadeLinks() { $FIFOXMLRSSFEED_Arr}";
+		$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeOut = 255;';
+		$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeIn = 0;';
+		$JaFade = $JaFade . 'var FIFOXMLRSSFEED_Fade = 0;';
+		$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeStep = 3;';
+		$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeWait = 3000;';
+		$JaFade = $JaFade . 'var FIFOXMLRSSFEED_bFadeOutt = true;';
+		$JaFade = $JaFade . '</script>';
+		$JaFade = $JaFade . '<span id="FIFOXMLRSSFEED_CSS_POSTPASGE">';
+		$JaFade = $JaFade . '<a href="'.$FIFOXMLRSSFEED_First_link.'" id="FIFOXMLRSSFEED_Link">'.$FIFOXMLRSSFEED_First_text.'</a>';
+		$JaFade = $JaFade . '</span>';
 	}
-		
-	$JaFade = $JaFade . "<link rel='stylesheet' type='text/css' href='".get_option('siteurl')."/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.css' />";
-	$JaFade = $JaFade . "<script type='text/javascript' src='".get_option('siteurl')."/wp-content/plugins/fade-in-fade-out-xml-rss-feed/fade-in-fade-out-xml-rss-feed.js'></script>";
-    $JaFade = $JaFade . "<script type='text/javascript' language='javascript'>function FIFOXMLRSSFEED_SetFadeLinks() { $FIFOXMLRSSFEED_Arr}";
-	$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeOut = 255;';
-	$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeIn = 0;';
-	$JaFade = $JaFade . 'var FIFOXMLRSSFEED_Fade = 0;';
-	$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeStep = 3;';
-	$JaFade = $JaFade . 'var FIFOXMLRSSFEED_FadeWait = 3000;';
-	$JaFade = $JaFade . 'var FIFOXMLRSSFEED_bFadeOutt = true;';
-	$JaFade = $JaFade . '</script>';
-    $JaFade = $JaFade . '<span id="FIFOXMLRSSFEED_CSS_POSTPASGE">';
-	$JaFade = $JaFade . '<a href="'.$FIFOXMLRSSFEED_First_link.'" id="FIFOXMLRSSFEED_Link">'.$FIFOXMLRSSFEED_First_text.'</a>';
-	$JaFade = $JaFade . '</span>';
+	else
+	{
+		$JaFade = __('Invalid or Broken rss link.', 'rss-scroller');
+	}
 	return $JaFade;
 }
 
