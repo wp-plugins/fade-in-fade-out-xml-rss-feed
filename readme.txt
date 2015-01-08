@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fad
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 7.3
+Tested up to: 4.1
+Stable tag: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -111,6 +111,10 @@ Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Transl
 
 1. Tested up to 4.0
 
+= Version 7.4 =
+
+1. Tested up to 4.1
+
 == Changelog ==
 
 = Version 1.0 =			
@@ -158,3 +162,7 @@ Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Transl
 = Version 7.3 =
 
 1. Tested up to 4.0
+
+= Version 7.4 =
+
+1. Tested up to 4.1
