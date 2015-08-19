@@ -1,6 +1,6 @@
 /**
  *     Fade in fade out xml rss feed
- *     Copyright (C) 2011 - 2014 www.gopiplus.com
+ *     Copyright (C) 2011 - 2015 www.gopiplus.com
  *     http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
  * 
  *     This program is free software: you can redistribute it and/or modify

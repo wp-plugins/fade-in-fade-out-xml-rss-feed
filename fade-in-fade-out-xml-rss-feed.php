@@ -4,7 +4,7 @@ Plugin Name: Fade in fade out xml rss feed
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Description: Now a day's everyone use fade in fade out text in some portion of the website to attract the user. So i have created new plug-in to do this. This plug-in directly retrieve title from RSS feed and create the fade in fade out effect in the word press website..
 Author: Gopi Ramasamy
-Version: 7.5
+Version: 7.6
 Author URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Donate link: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags: wordpress, plugin, widget, fade in, fade out, rss, xml, feed
