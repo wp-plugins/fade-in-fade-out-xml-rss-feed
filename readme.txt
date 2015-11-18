@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fad
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags:  wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 Requires at least: 3.5
-Tested up to: 4.3
-Stable tag: 7.6
+Tested up to: 4.3.1
+Stable tag: 7.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -32,6 +32,11 @@ Do you want to create the fade in fade out effect for your own content? Then use
 *	Support all browser.
 *	Read title from RSS feed.
 *	Short code available for pages and posts.
+
+= Translators =
+
+* Tamil (ta) - [Gopi Ramasamy](http://www.gopiplus.com/)
+* Polish (pl_PL) - [Abdul Sattar](https://www.couponmachine.in/)
 
 == Installation ==	
 
@@ -123,6 +128,11 @@ Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Transl
 
 1. Tested up to 4.3
 
+= Version 7.7 =
+
+1. Tested up to 4.3.1
+2. Text Domain slug has been added for Language Packs.
+
 == Changelog ==
 
 = Version 1.0 =			
@@ -182,3 +192,8 @@ Plugin *.po file (fade-in-fade-out.po) available in the languages folder. Transl
 = Version 7.6 =
 
 1. Tested up to 4.3
+
+= Version 7.7 =
+
+1. Tested up to 4.3.1
+2. Text Domain slug has been added for Language Packs.

@@ -4,12 +4,14 @@ Plugin Name: Fade in fade out xml rss feed
 Plugin URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Description: Now a day's everyone use fade in fade out text in some portion of the website to attract the user. So i have created new plug-in to do this. This plug-in directly retrieve title from RSS feed and create the fade in fade out effect in the word press website..
 Author: Gopi Ramasamy
-Version: 7.6
+Version: 7.7
 Author URI: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Donate link: http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/
 Tags: wordpress, plugin, widget, fade in, fade out, rss, xml, feed
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fade-in-fade-out-xml-rss-feed
+Domain Path: /languages
 */
 
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
@@ -76,7 +78,7 @@ function FIFOXMLRSSFEED()
 	}
 	else
 	{
-		_e('Invalid or Broken rss link.', 'fade-in-fade-out');
+		_e('Invalid or Broken rss link.', 'fade-in-fade-out-xml-rss-feed');
 	}
 }
 
@@ -94,10 +96,10 @@ function FIFOXMLRSSFEED_install()
 function FIFOXMLRSSFEED_control() 
 {
 	echo '<p><b>';
-	 _e('Fade in xml rss feed', 'fade-in-fade-out');
+	 _e('Fade in xml rss feed', 'fade-in-fade-out-xml-rss-feed');
 	echo '.</b> ';
-	_e('Check official website for more information', 'fade-in-fade-out');
-	?> <a target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/"><?php _e('click here', 'fade-in-fade-out'); ?></a></p><?php
+	_e('Check official website for more information', 'fade-in-fade-out-xml-rss-feed');
+	?> <a target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/"><?php _e('click here', 'fade-in-fade-out-xml-rss-feed'); ?></a></p><?php
 }
 
 function FIFOXMLRSSFEED_widget($args) 
@@ -118,8 +120,8 @@ function FIFOXMLRSSFEED_admin_options()
 	  <div class="form-wrap">
 		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
 		</div>
-		<h2><?php _e('Fade in xml rss feed', 'fade-in-fade-out'); ?></h2>
-		<h3><?php _e('Plugin setting', 'fade-in-fade-out'); ?></h3>
+		<h2><?php _e('Fade in xml rss feed', 'fade-in-fade-out-xml-rss-feed'); ?></h2>
+		<h3><?php _e('Plugin setting', 'fade-in-fade-out-xml-rss-feed'); ?></h3>
 		<?php
 		$FIFOXMLRSSFEED_Title = get_option('FIFOXMLRSSFEED_Title');
 		$FIFOXMLRSSFEED_FadeWait = get_option('FIFOXMLRSSFEED_FadeWait');
@@ -149,50 +151,50 @@ function FIFOXMLRSSFEED_admin_options()
 			
 			?>
 			<div class="updated fade">
-				<p><strong><?php _e('Details successfully updated.', 'fade-in-fade-out'); ?></strong></p>
+				<p><strong><?php _e('Details successfully updated.', 'fade-in-fade-out-xml-rss-feed'); ?></strong></p>
 			</div>
 			<?php
 		}
 		?>
 		<form name="FIFOXMLRSSFEED_form" method="post" action="">
-		<label for="tag-title"><?php _e('Widget title (Only for widget)', 'fade-in-fade-out'); ?> </label>
+		<label for="tag-title"><?php _e('Widget title (Only for widget)', 'fade-in-fade-out-xml-rss-feed'); ?> </label>
 		<input name="FIFOXMLRSSFEED_Title" size="50" id="FIFOXMLRSSFEED_Title" type="text" value="<?php echo $FIFOXMLRSSFEED_Title; ?>" />
-		<p><?php _e('Widget title', 'fade-in-fade-out'); ?></p>
+		<p><?php _e('Widget title', 'fade-in-fade-out-xml-rss-feed'); ?></p>
 			  
-		<label for="tag-title"><?php _e('Fade Wait (Global Setting)', 'fade-in-fade-out'); ?> </label>
+		<label for="tag-title"><?php _e('Fade Wait (Global Setting)', 'fade-in-fade-out-xml-rss-feed'); ?> </label>
 		<input name="FIFOXMLRSSFEED_FadeWait" id="FIFOXMLRSSFEED_FadeWait" type="text" size="30" value="<?php echo $FIFOXMLRSSFEED_FadeWait; ?>" />
 		<p></p>
 		
-		<label for="tag-title"><?php _e('RSS feed for widget (Support only external feed)', 'fade-in-fade-out'); ?> </label>
+		<label for="tag-title"><?php _e('RSS feed for widget (Support only external feed)', 'fade-in-fade-out-xml-rss-feed'); ?> </label>
 		<input name="FIFOXMLRSSFEED_rss_0" id="FIFOXMLRSSFEED_rss_0" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_0; ?>" />
-		<p><?php _e('This option only for widget', 'fade-in-fade-out'); ?> <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
+		<p><?php _e('This option only for widget', 'fade-in-fade-out-xml-rss-feed'); ?> <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
 		
-		<label for="tag-title"><?php _e('RSS feed 1 (Support only external feed)', 'fade-in-fade-out'); ?> </label>
+		<label for="tag-title"><?php _e('RSS feed 1 (Support only external feed)', 'fade-in-fade-out-xml-rss-feed'); ?> </label>
 		<input name="FIFOXMLRSSFEED_rss_1" id="FIFOXMLRSSFEED_rss_1" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_1; ?>" />
-		<p><?php _e('Short code :', 'fade-in-fade-out'); ?> [fadein-fadeout-rss feed="link1"] <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
+		<p><?php _e('Short code :', 'fade-in-fade-out-xml-rss-feed'); ?> [fadein-fadeout-rss feed="link1"] <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
 		
-		<label for="tag-title"><?php _e('RSS feed 2 (Support only external feed)', 'fade-in-fade-out'); ?> </label>
+		<label for="tag-title"><?php _e('RSS feed 2 (Support only external feed)', 'fade-in-fade-out-xml-rss-feed'); ?> </label>
 		<input name="FIFOXMLRSSFEED_rss_2" id="FIFOXMLRSSFEED_rss_2" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_2; ?>" />
-		<p><?php _e('Short code :', 'fade-in-fade-out'); ?> [fadein-fadeout-rss feed="link2"] <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
+		<p><?php _e('Short code :', 'fade-in-fade-out-xml-rss-feed'); ?> [fadein-fadeout-rss feed="link2"] <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
 		
-		<label for="tag-title"><?php _e('RSS feed 3 (Support only external feed)', 'fade-in-fade-out'); ?> </label>
+		<label for="tag-title"><?php _e('RSS feed 3 (Support only external feed)', 'fade-in-fade-out-xml-rss-feed'); ?> </label>
 		<input name="FIFOXMLRSSFEED_rss_3" id="FIFOXMLRSSFEED_rss_3" type="text" size="80" value="<?php echo $FIFOXMLRSSFEED_rss_3; ?>" />
-		<p><?php _e('Short code :', 'fade-in-fade-out'); ?> [fadein-fadeout-rss feed="link3"] <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
+		<p><?php _e('Short code :', 'fade-in-fade-out-xml-rss-feed'); ?> [fadein-fadeout-rss feed="link3"] <br />Example: http://www.gopiplus.com/work/category/word-press-plug-in/feed/</p>
 		
 		<?php wp_nonce_field('FIFOXMLRSSFEED_form_setting'); ?>
-		<input name="FIFOXMLRSSFEED_submit" id="FIFOXMLRSSFEED_submit" lang="publish" class="button-primary" value="<?php _e('Update Setting', 'fade-in-fade-out'); ?>" type="Submit" />
-		<a class="button-primary" target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/"><?php _e('Help', 'fade-in-fade-out'); ?></a>
+		<input name="FIFOXMLRSSFEED_submit" id="FIFOXMLRSSFEED_submit" lang="publish" class="button-primary" value="<?php _e('Update Setting', 'fade-in-fade-out-xml-rss-feed'); ?>" type="Submit" />
+		<a class="button-primary" target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/"><?php _e('Help', 'fade-in-fade-out-xml-rss-feed'); ?></a>
 		</form>
-		<h3><?php _e('Plugin configuration option', 'fade-in-fade-out'); ?></h3>
+		<h3><?php _e('Plugin configuration option', 'fade-in-fade-out-xml-rss-feed'); ?></h3>
 		<ol>
-		  <li><?php _e('Drag and drop the widget.', 'fade-in-fade-out'); ?></li>
-		  <li><?php _e('Add the plugin in the posts or pages using short code.', 'fade-in-fade-out'); ?></li>
-		  <li><?php _e('Add directly in to the theme using PHP code.', 'fade-in-fade-out'); ?></li>
+		  <li><?php _e('Drag and drop the widget.', 'fade-in-fade-out-xml-rss-feed'); ?></li>
+		  <li><?php _e('Add the plugin in the posts or pages using short code.', 'fade-in-fade-out-xml-rss-feed'); ?></li>
+		  <li><?php _e('Add directly in to the theme using PHP code.', 'fade-in-fade-out-xml-rss-feed'); ?></li>
 		</ol>
 	  </div>
 	  <p class="description">
-		<?php _e('Check official website for more information', 'fade-in-fade-out'); ?>
-		<a target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/"><?php _e('click here', 'fade-in-fade-out'); ?></a>
+		<?php _e('Check official website for more information', 'fade-in-fade-out-xml-rss-feed'); ?>
+		<a target="_blank" href="http://www.gopiplus.com/work/2011/04/29/wordpress-plugin-fade-in-fade-out-xml-rss-feed/"><?php _e('click here', 'fade-in-fade-out-xml-rss-feed'); ?></a>
 	</p>
 	</div>
 	<?php
@@ -271,7 +273,7 @@ function FIFOXMLRSSFEED_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page('Fade in xml rss feed', __('Fade in xml rss feed', 'fade-in-fade-out'), 'manage_options', __FILE__, 'FIFOXMLRSSFEED_admin_options' );
+		add_options_page('Fade in xml rss feed', __('Fade in xml rss feed', 'fade-in-fade-out-xml-rss-feed'), 'manage_options', __FILE__, 'FIFOXMLRSSFEED_admin_options' );
 	}
 }
 
@@ -279,11 +281,11 @@ function FIFOXMLRSSFEED_init()
 {
 	if(function_exists('wp_register_sidebar_widget')) 
 	{
-		wp_register_sidebar_widget('fade-in-xml-rss-feed', __('Fade in xml rss feed', 'fade-in-fade-out'), 'FIFOXMLRSSFEED_widget');
+		wp_register_sidebar_widget('fade-in-xml-rss-feed', __('Fade in xml rss feed', 'fade-in-fade-out-xml-rss-feed'), 'FIFOXMLRSSFEED_widget');
 	}
 	if(function_exists('wp_register_widget_control')) 
 	{
-		wp_register_widget_control('fade-in-xml-rss-feed', array( __('Fade in xml rss feed', 'fade-in-fade-out'), 'widgets'), 'FIFOXMLRSSFEED_control');
+		wp_register_widget_control('fade-in-xml-rss-feed', array( __('Fade in xml rss feed', 'fade-in-fade-out-xml-rss-feed'), 'widgets'), 'FIFOXMLRSSFEED_control');
 	} 
 }
 
@@ -303,7 +305,7 @@ function FIFOXMLRSSFEED_javascript_files()
 
 function FIFOXMLRSSFEED_textdomain() 
 {
-	  load_plugin_textdomain( 'fade-in-fade-out', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	  load_plugin_textdomain( 'fade-in-fade-out-xml-rss-feed', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 add_action('plugins_loaded', 'FIFOXMLRSSFEED_textdomain');
